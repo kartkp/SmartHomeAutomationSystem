@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="smartHome.Api/smartHome.Api.csproj" />
+  <Project Path="smartHome.App/smartHome.App.csproj" />
+  <Project Path="smartHome.Core/smartHome.Core.csproj" />
+  <Project Path="smartHome.Infrastructure/smartHome.Infrastructure.csproj" />
+</Solution>
