@@ -1,54 +1,50 @@
-##PROJECT STRUCTURE:
 smartHome/
 │
-├── smartHome.App/                # Console Application (Frontend)
+├── smartHome.App/                 # Console Application (Frontend)
 │   ├── UI/
-│   │   └── Menu.cs              # Main dashboard & user interaction
+│   │   └── Menu.cs               # Main dashboard & user interaction
 │   │
 │   ├── Services/
-│   │   └── ApiService.cs        # Backend API calls (HTTP client)
+│   │   └── ApiService.cs         # Backend API calls (HTTP client)
 │   │
 │   ├── Utilities/
-│   │   └── Scheduler.cs         # Background scheduling (auto toggle)
+│   │   └── Scheduler.cs          # Background scheduling (auto toggle)
 │   │
-│   └── Program.cs               # Entry point (main flow control)
+│   └── Program.cs                # Entry point
 │
-├── smartHome.Api/               # ASP.NET Core Web API (Backend)
+├── smartHome.Api/                # ASP.NET Core API (Backend)
 │   ├── Controllers/
-│   │   └── DeviceController.cs  # API endpoints (GET, PUT, POST, DELETE)
+│   │   └── DeviceController.cs   # API endpoints
 │   │
 │   ├── Services/
-│   │   └── DeviceService.cs     # Business logic (rules, validation, armed system)
+│   │   └── DeviceService.cs      # Business logic (armed, validation)
 │   │
-│   ├── DTOs/                   # (Optional if separate)
-│   │   └── Request/Response models
-│   │
-│   └── Program.cs              # API startup & configuration
+│   └── Program.cs               # API configuration
 │
-├── smartHome.Core/             # Shared Layer (Domain)
+├── smartHome.Core/              # Shared Layer (Domain)
 │   ├── Entities/
-│   │   ├── Device.cs           # Device model (DB table)
-│   │   ├── CommandHistory.cs   # Logs/history table
-│   │   └── DeviceGroup.cs      # Group/room model
+│   │   ├── Device.cs
+│   │   ├── CommandHistory.cs
+│   │   └── DeviceGroup.cs
 │   │
 │   ├── DTOs/
-│   │   ├── DeviceDto.cs        # Device response model
-│   │   ├── UpdateDeviceDto.cs  # Update request
-│   │   ├── HistoryDto.cs       # Recent activity model
-│   │   └── ArmedRequest.cs     # Armed system request
+│   │   ├── DeviceDto.cs
+│   │   ├── UpdateDeviceDto.cs
+│   │   ├── HistoryDto.cs
+│   │   └── ArmedRequest.cs
 │   │
 │   ├── Interfaces/
 │   │   ├── IDeviceService.cs
 │   │   └── IDeviceRepository.cs
 │   │
 │   └── Exceptions/
-│       └── Custom exceptions (InvalidCommandException, etc.)
+│       └── Custom exceptions
 │
-├── smartHome.Infrastructure/   # Data Layer
+├── smartHome.Infrastructure/    # Data Layer
 │   ├── Data/
-│   │   └── SmartHomeDbContext.cs   # EF Core DB context
+│   │   └── SmartHomeDbContext.cs
 │   │
 │   └── Repositories/
-│       └── DeviceRepository.cs    # DB operations (CRUD)
+│       └── DeviceRepository.cs
 │
 └── README.md
